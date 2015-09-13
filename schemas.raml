@@ -1,1 +1,18 @@
-
+- deliveries: |
+    {
+      "$schema": "http://json-schema.org/draft-03/schema",
+      "type": "array",
+      "items": 
+      {
+        "type": "object",
+        "properties": 
+        {
+          "id": { "type": "string", "required": true },
+          "at": { "type": "string", "required": true },
+          "toAddressId": { "type": "string", "required": true },
+          "orderItemId": { "type": "string", "required": true },
+          "status": { "type": "string", "required": true, "enum": [ "scheduled", "completed", "failed" ] },
+          "droneId": { "type": "string" }
+        }
+      }
+    }
